@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace AllanReford._SimplePlatformer.Code.Input
 {
@@ -9,7 +10,7 @@ namespace AllanReford._SimplePlatformer.Code.Input
 
         public bool isJumpButtonDown;
         
-        public Vector2 horizontalInput;
+        public Vector2 wasdInput;
 
         private PlayerInput _playerInput;
 
@@ -32,7 +33,7 @@ namespace AllanReford._SimplePlatformer.Code.Input
 
         private void Update()
         {
-            horizontalInput = _playerInput.Locomotion.HorizontalMovement.ReadValue<Vector2>();
+            wasdInput = _playerInput.Locomotion.HorizontalMovement.ReadValue<Vector2>();
         }
 
         private void OnEnable()
